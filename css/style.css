@@ -362,15 +362,15 @@ button {
   border-radius: 50%;
   transition: transform 0.2s ease-in-out;
 }
-.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.red {
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.color1 {
   background: #99c4cc;
 }
-.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.yellow {
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.color2 {
   background: #ca99cc;
 }
-.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.olive {
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.color3 {
   background: #a6cc99;
 }
-.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.green {
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.color4 {
   background: #cc9999;
 }/*# sourceMappingURL=style.css.map */
