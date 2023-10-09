@@ -1,0 +1,355 @@
+@font-face {
+    font-family: "ITC Avant Garde Gothic Pro";
+    src:
+        url("../fonts/ITCAvantGardeGothicPro-Bold.woff2") format("woff2"),
+        url("../fonts/ITCAvantGardeGothicPro-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Avenir";
+    src:
+        url("../fonts/Avenir-Light.woff2") format("woff2"),
+        url("../fonts/Avenir-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src:
+        url("../fonts/Avenir-Regular.woff2") format("woff2"),
+        url("../fonts/Avenir-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src:
+        url("../fonts/Avenir-Black.woff2") format("woff2"),
+        url("../fonts/Avenir-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src:
+        url("../fonts/Avenir-Heavy.woff2") format("woff2"),
+        url("../fonts/Avenir-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src:
+        url("../fonts/Avenir-Book.woff2") format("woff2"),
+        url("../fonts/Avenir-Book.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Avenir", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+    -moz-appearance: auto !important;
+    appearance: auto !important;
+    -webkit-appearance: auto !important;
+}
+
+//responsive breakpoints
+$sm-breakpoint: 600px; //Small
+$md-breakpoint: 768px; //Medium
+$lg-breakpoint: 991px; //Large
+$xl-breakpoint: 1200px; //Extra large
+$xxl-breakpoint: 1400px; //Extra extra large
+$colors: (
+    red: #99c4cc,
+    yellow: #ca99cc,
+    olive: #a6cc99,
+    green: #cc9999
+);
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #666;
+}
+
+.products {
+    min-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    @media screen and (max-width:$sm-breakpoint) {
+        padding-bottom: 4rem;
+    }
+    .col-left {
+        height: 100%;
+        position: relative;
+        z-index: 9;
+
+        @media screen and (max-width: $sm-breakpoint) {
+            height: 30rem;
+            z-index: -1;
+            &:before {
+                content: "";
+                position: absolute;
+                opacity: 0.5;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 78.65%);
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+    }
+    .col-right {
+        padding: 8rem 0rem 4rem 6rem;
+        @media screen and (max-width: 1550px) {
+            padding: 6rem 0rem 4rem 6rem;
+        }
+        @media screen and (max-width: $xl-breakpoint) {
+            padding: 4rem 0rem 4rem 2rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            padding: 0rem 0rem 0rem 2rem;
+            margin-top: -12rem;
+        }
+
+        .top {
+            h4 {
+                color: var(--color-black);
+                /* Heading/4 */
+                font-family: "ITC Avant Garde Gothic Pro";
+                font-size: 3rem;
+                max-width: 42rem;
+                line-height: 130%; /* 40.625px */
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                @media screen and (max-width: 1550px) {
+                    max-width: 28rem;
+                    font-size: 1.953rem;
+                }
+                @media screen and (max-width: $xl-breakpoint) {
+                    font-size: 1.6rem;
+                    max-width: 24rem;
+                }
+                @media screen and (max-width: $lg-breakpoint) {
+                    font-size: 1.2rem;
+                    max-width: 20rem;
+                }
+                @media screen and (max-width: $sm-breakpoint) {
+                    color: var(--color-white);
+                }
+            }
+            p {
+                max-width: 40rem;
+                font-size: 1.3rem;
+                color: var(--color-gray);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                margin-bottom: 2rem;
+                @media screen and (max-width: 1550px) {
+                    max-width: 28rem;
+                    font-size: 1rem;
+                }
+                @media screen and (max-width: $xl-breakpoint) {
+                    font-size: 0.8rem;
+                    max-width: 22rem;
+                }
+                @media screen and (max-width: $lg-breakpoint) {
+                    max-width: 18rem;
+                    font-size: 0.7rem;
+                }
+                @media screen and (max-width: $sm-breakpoint) {
+                    display: none;
+                }
+            }
+            .btn {
+                color: var(--color-black);
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                text-transform: capitalize;
+                border-bottom: 1px solid var(--color-black);
+                padding: 0;
+                padding-bottom: 0.2rem;
+                border-radius: 0;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                @media screen and (max-width: 1550px) {
+                    font-size: 0.8rem;
+                }
+                @media screen and (max-width: $sm-breakpoint) {
+                    color: var(--color-white);
+                    border-bottom: 1px solid var(--color-white);
+                }
+            }
+        }
+
+        .slider-area {
+            position: relative;
+            .swiper-button-next,
+            .swiper-rtl .swiper-button-prev {
+                right: 70px !important;
+                border: 1px solid #0000005d;
+                width: 4rem;
+                height: 4rem;
+                @media screen and (max-width: 1550px) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                @media screen and (max-width:$xl-breakpoint) {
+                    width: 2rem;
+                    height: 2rem;
+                }
+                @media screen and (max-width:$lg-breakpoint) {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+                &:before {
+                    content: "";
+                    background: url(../img/chevron-right.svg) no-repeat;
+                    background-size: 50%;
+                    background-position: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .swiper-container {
+                position: relative;
+                margin-top: 5rem;
+                margin-right: -4rem;
+
+                @media screen and (max-width: $lg-breakpoint) {
+                    margin-top: 2rem;
+                }
+
+                .swiper {
+                    width: 100%;
+                    height: 100%;
+                    overflow: inherit;
+
+                    .swiper-slide {
+                        width: calc(430px - 100px);
+                        margin-right: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        @media screen and (max-width: 1800px) {
+                            width: calc(430px - 200px);
+                        }
+                        @media screen and (max-width: $xl-breakpoint) {
+                            width: calc(270px - 100px);
+                        }
+                        @media screen and (max-width: $lg-breakpoint) {
+                            width: calc(230px - 100px);
+                        }
+                        @media screen and (max-width: $sm-breakpoint) {
+                            width: calc(250px - 100px);
+                        }
+                        img {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                        h6 {
+                            color: var(--color-black);
+                            font-size: 12.8px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 160%; /* 20.48px */
+                            margin-top: 1rem;
+                        }
+                        .bottom {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            @media screen and (max-width: $sm-breakpoint) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .price {
+                                color: var(--color-black);
+                                text-align: center;
+                                font-size: 12.8px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 160%; /* 20.48px */
+                            }
+                            input[type="radio"] {
+                                display: none;
+                                &:checked + label {
+                                    border: 1px solid var(--color-black);
+                                }
+                            }
+
+                            label {
+                                display: inline-block;
+                                width: 13px;
+                                height: 13px;
+                                margin-right: 2px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                padding: 0.1rem;
+                                &:last-child {
+                                    margin-right: 0rem;
+                                }
+
+                                span {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    transition: transform 0.2s ease-in-out;
+                                    @each $name, $value in $colors {
+                                        &.#{$name} {
+                                            background: $value;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
