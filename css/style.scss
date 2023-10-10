@@ -112,7 +112,7 @@ $colors: (
     min-height: 100vh;
     max-width: 100%;
     overflow: hidden;
-    @media screen and (max-width:$sm-breakpoint) {
+    @media screen and (max-width: $sm-breakpoint) {
         padding-bottom: 4rem;
     }
     .col-left {
@@ -227,7 +227,8 @@ $colors: (
         .slider-area {
             position: relative;
             .swiper-button-next,
-            .swiper-rtl .swiper-button-prev {
+            .swiper-rtl .swiper-button-prev, .swiper-button-prev,
+            .swiper-rtl .swiper-button-next {
                 right: 70px !important;
                 border: 1px solid #0000005d;
                 width: 4rem;
@@ -236,11 +237,11 @@ $colors: (
                     width: 2.5rem;
                     height: 2.5rem;
                 }
-                @media screen and (max-width:$xl-breakpoint) {
+                @media screen and (max-width: $xl-breakpoint) {
                     width: 2rem;
                     height: 2rem;
                 }
-                @media screen and (max-width:$lg-breakpoint) {
+                @media screen and (max-width: $lg-breakpoint) {
                     display: none;
                 }
                 &:after {
@@ -253,8 +254,19 @@ $colors: (
                     background-position: center;
                     height: 100%;
                     width: 100%;
+                    
                 }
             }
+            .swiper-button-prev,
+            .swiper-rtl .swiper-button-next {
+              
+                transform: rotate(180deg);
+              
+            }
+            .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+                opacity: 0;
+            }
+
             .swiper-container {
                 position: relative;
                 margin-top: 5rem;

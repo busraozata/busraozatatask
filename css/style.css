@@ -226,7 +226,8 @@ button {
   position: relative;
 }
 .products .col-right .slider-area .swiper-button-next,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev {
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+.products .col-right .slider-area .swiper-rtl .swiper-button-next {
   right: 70px !important;
   border: 1px solid rgba(0, 0, 0, 0.3647058824);
   width: 4rem;
@@ -234,36 +235,48 @@ button {
 }
 @media screen and (max-width: 1550px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev {
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     width: 2.5rem;
     height: 2.5rem;
   }
 }
 @media screen and (max-width: 1200px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev {
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     width: 2rem;
     height: 2rem;
   }
 }
 @media screen and (max-width: 991px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev {
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     display: none;
   }
 }
 .products .col-right .slider-area .swiper-button-next:after,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev:after {
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev:after, .products .col-right .slider-area .swiper-button-prev:after,
+.products .col-right .slider-area .swiper-rtl .swiper-button-next:after {
   display: none;
 }
 .products .col-right .slider-area .swiper-button-next:before,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev:before {
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev:before, .products .col-right .slider-area .swiper-button-prev:before,
+.products .col-right .slider-area .swiper-rtl .swiper-button-next:before {
   content: "";
   background: url(../img/chevron-right.svg) no-repeat;
   background-size: 50%;
   background-position: center;
   height: 100%;
   width: 100%;
+}
+.products .col-right .slider-area .swiper-button-prev,
+.products .col-right .slider-area .swiper-rtl .swiper-button-next {
+  transform: rotate(180deg);
+}
+.products .col-right .slider-area .swiper-button-next.swiper-button-disabled, .products .col-right .slider-area .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }
 .products .col-right .slider-area .swiper-container {
   position: relative;
