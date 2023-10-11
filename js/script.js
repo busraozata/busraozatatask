@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             down: 5,
             up: 5
         },
-        offset: 100
+        offset: 20
     });
 
     headroom.init();
