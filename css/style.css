@@ -77,6 +77,55 @@ button {
   --color-white: #fff;
   --color-black: #000;
   --color-gray: #666;
+  --bg-color: #fbfbfb;
+}
+
+#menu-area:not(.mm-menu):not(.mm) {
+  display: none;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  background: var(--bg-color);
+}
+#header .fa-bars {
+  color: var(--color-black);
+}
+
+#header a {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#header a[href="#menu-area"] {
+  display: flex;
+}
+
+.mm-wrapper--opened #header a[href="#menu-area"] {
+  display: none;
+}
+
+#header a[href="#page"] {
+  display: none;
+}
+
+.mm-wrapper--opened #header a[href="#page"] {
+  display: flex;
 }
 
 .products {
@@ -202,6 +251,7 @@ button {
   font-weight: 900;
   line-height: normal;
   text-transform: capitalize;
+  border: none;
   border-bottom: 1px solid var(--color-black);
   padding: 0;
   padding-bottom: 0.2rem;
@@ -226,7 +276,8 @@ button {
   position: relative;
 }
 .products .col-right .slider-area .swiper-button-next,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev,
+.products .col-right .slider-area .swiper-button-prev,
 .products .col-right .slider-area .swiper-rtl .swiper-button-next {
   right: 70px !important;
   border: 1px solid rgba(0, 0, 0, 0.3647058824);
@@ -235,7 +286,8 @@ button {
 }
 @media screen and (max-width: 1550px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev,
+  .products .col-right .slider-area .swiper-button-prev,
   .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     width: 2.5rem;
     height: 2.5rem;
@@ -243,7 +295,8 @@ button {
 }
 @media screen and (max-width: 1200px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev,
+  .products .col-right .slider-area .swiper-button-prev,
   .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     width: 2rem;
     height: 2rem;
@@ -251,18 +304,21 @@ button {
 }
 @media screen and (max-width: 991px) {
   .products .col-right .slider-area .swiper-button-next,
-  .products .col-right .slider-area .swiper-rtl .swiper-button-prev, .products .col-right .slider-area .swiper-button-prev,
+  .products .col-right .slider-area .swiper-rtl .swiper-button-prev,
+  .products .col-right .slider-area .swiper-button-prev,
   .products .col-right .slider-area .swiper-rtl .swiper-button-next {
     display: none;
   }
 }
 .products .col-right .slider-area .swiper-button-next:after,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev:after, .products .col-right .slider-area .swiper-button-prev:after,
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev:after,
+.products .col-right .slider-area .swiper-button-prev:after,
 .products .col-right .slider-area .swiper-rtl .swiper-button-next:after {
   display: none;
 }
 .products .col-right .slider-area .swiper-button-next:before,
-.products .col-right .slider-area .swiper-rtl .swiper-button-prev:before, .products .col-right .slider-area .swiper-button-prev:before,
+.products .col-right .slider-area .swiper-rtl .swiper-button-prev:before,
+.products .col-right .slider-area .swiper-button-prev:before,
 .products .col-right .slider-area .swiper-rtl .swiper-button-next:before {
   content: "";
   background: url(../img/chevron-right.svg) no-repeat;
@@ -275,7 +331,8 @@ button {
 .products .col-right .slider-area .swiper-rtl .swiper-button-next {
   transform: rotate(180deg);
 }
-.products .col-right .slider-area .swiper-button-next.swiper-button-disabled, .products .col-right .slider-area .swiper-button-prev.swiper-button-disabled {
+.products .col-right .slider-area .swiper-button-next.swiper-button-disabled,
+.products .col-right .slider-area .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
 .products .col-right .slider-area .swiper-container {
@@ -350,8 +407,16 @@ button {
   font-weight: 500;
   line-height: 160%; /* 20.48px */
 }
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom .form-group {
+  margin-right: 0.2rem;
+}
+.products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom .form-group:last-child {
+  margin-right: 0.2rem;
+}
 .products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom input[type=radio] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 .products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom input[type=radio]:checked + label {
   border: 1px solid var(--color-black);
@@ -386,4 +451,47 @@ button {
 }
 .products .col-right .slider-area .swiper-container .swiper .swiper-slide .bottom label span.color4 {
   background: #cc9999;
+}
+
+footer {
+  padding: 6rem 3rem 5rem 3rem;
+  background-color: var(--bg-color);
+}
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+}
+footer .accordion {
+  padding: 0rem 1rem;
+}
+@media screen and (max-width: 600px) {
+  footer .accordion {
+    margin-bottom: 1rem;
+    padding: 0rem;
+  }
+}
+footer .accordion .accordion-title {
+  cursor: pointer;
+  color: var(--color-black);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  footer .accordion .accordion-title {
+    font-size: 1rem;
+  }
+}
+footer .accordion .accordion-content {
+  display: none;
+}
+footer .accordion .accordion-content p {
+  font-size: 1rem;
+}
+@media screen and (max-width: 1550px) {
+  footer .accordion .accordion-content p {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=style.css.map */

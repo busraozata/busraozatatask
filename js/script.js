@@ -36,12 +36,21 @@ function initializeSlider(sliderNumber) {
     var slider = document.querySelector('.swiper-slide:nth-child(' + sliderNumber + ')');
     if (slider) {
         var colorOptions = slider.querySelectorAll('input[name="color"]');
+        var productImage = slider.querySelector('.product-image');
+
+       
         colorOptions.forEach(function (radio) {
             if (radio.checked) {
                 changeImage(radio);
             }
             radio.addEventListener('change', function () {
                 changeImage(this);
+            });
+            radio.addEventListener('mouseover', function () {
+                if (!radio.checked) {
+                    radio.checked = true;
+                    changeImage(radio, productImage);
+                }
             });
         });
     }
@@ -57,3 +66,65 @@ function changeImage(radio) {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    var accordionTitles = document.querySelectorAll(".accordion-title");
+
+    accordionTitles.forEach(function (title) {
+        title.addEventListener("click", function () {
+            var content = title.nextElementSibling;
+            var icon = title.querySelector("i");
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.classList.remove("fa-caret-up");
+                icon.classList.add("fa-caret-down");
+            } else {
+                var allContents = document.querySelectorAll(".accordion-content");
+                var allIcons = document.querySelectorAll(".accordion-title i");
+
+                allContents.forEach(function (item) {
+                    item.style.display = "none";
+                });
+
+                allIcons.forEach(function (item) {
+                    item.classList.remove("fa-caret-up");
+                    item.classList.add("fa-caret-down");
+                });
+
+                content.style.display = "block";
+                icon.classList.remove("fa-caret-down");
+                icon.classList.add("fa-caret-up");
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var header = document.querySelector("#header");
+
+    var headroom = new Headroom(header, {
+        tolerance: {
+            down: 5,
+            up: 5
+        },
+        offset: 200
+    });
+
+    headroom.init();
+
+});
+
+
+
+
+document.addEventListener("click", (evnt) => {
+    if (evnt.target?.closest?.('a[href^="#/"]')) {
+        evnt.preventDefault();
+        alert("Thank you for clicking, but that's a demo link.");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    new Mmenu("#menu-area", { slidingSubmenus: false }, {});
+});

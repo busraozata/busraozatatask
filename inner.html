@@ -4,159 +4,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mmenu-js/8.5.24/mmenu.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/Headroom.css">
     <link rel="stylesheet" href="css/style.css">
-
     <title>Büşra Özata Task</title>
 </head>
 
 <body>
-    <section class="products">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="col-left"
-                    style="background: url(./img/bg.png) no-repeat; background-size: cover; background-position: top;">
 
+
+
+    <nav id="menu-area">
+        <ul id="panel-menu">
+            <li><a href="#/">Home</a></li>
+            <li><span>About us</span>
+                <ul>
+                    <li><a href="#/about/history">History</a></li>
+                    <li><span>The team</span>
+                        <ul>
+                            <li><a href="#/about/team/management">Management</a></li>
+                            <li><a href="#/about/team/sales">Sales</a></li>
+                            <li><a href="#/about/team/development">Development</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <div id="page">
+        <header id="header" class="header header--fixed hide-from-print" role="banner">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <span>Byte Dijital</span>
+                    <span>Task</span>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="col-right">
-                    <div class="top">
-                        <h4>Everyday items, we have something to suit every occasion.</h4>
-                        <p>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin
-                            leo
-                            gravida
-                            cursus.</p>
-                        <a href="#" class="btn">Shop all everyday items</a>
+        </header>
+        <div id="header">
+            <a href="#menu-area" class="fa fa-bars"></a>
+        </div>
+        <section class="products">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="col-left"
+                        style="background: url(./img/bg.png) no-repeat; background-size: cover; background-position: top;">
+
                     </div>
-                    <div class="slider-area">
-                        <div class="swiper-container">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="img-wrapper">
-                                            <img class="product-image" src="./img/bg-1.png" alt="ürün">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="col-right">
+                        <div class="top">
+                            <h4>Everyday items, we have something to suit every occasion.</h4>
+                            <p>At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu
+                                proin
+                                leo
+                                gravida
+                                cursus.</p>
+                            <a href="#" class="btn">Shop all everyday items</a>
+                        </div>
+                        <div class="slider-area">
+                            <div class="swiper-container">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="img-wrapper">
+                                                <img class="product-image" src="./img/bg-1.png" alt="ürün">
+                                            </div>
+                                            <div class="content">
+                                                <h6>365 Signature Hoodie</h6>
+                                                <div class="bottom">
+                                                    <span class="price">€33.95</span>
+                                                    <div class="change">
+                                                        <form>
+                                                            <div class="form-row d-flex">
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color1"
+                                                                        value="./img/bg-1-2.png" checked />
+                                                                    <label for="color1"><span
+                                                                            class="color1"></span></label>
+                                                                </div>
+
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color2"
+                                                                        value="./img/bg-1-3.png" />
+                                                                    <label for="color2"><span
+                                                                            class="color2"></span></label>
+                                                                </div>
+
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color3"
+                                                                        value="./img/bg-1-5.png" />
+                                                                    <label for="color3"><span
+                                                                            class="color3"></span></label>
+                                                                </div>
+
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color4"
+                                                                        value="./img/bg-1-4.png" />
+                                                                    <label for="color4"><span
+                                                                            class="color4"></span></label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="content">
-                                            <h6>365 Signature Hoodie</h6>
-                                            <div class="bottom">
-                                                <span class="price">€33.95</span>
-                                                <div class="change">
-                                                    <form>
-                                                        <input type="radio" name="color" id="color1" value="./img/bg-1-2.png"checked/>
-                                                        <label for="color1"><span class="color1"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color2" value="./img/bg-1-3.png" />
-                                                        <label for="color2"><span class="color2"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color3" value="./img/bg-1-5.png"  />
-                                                        <label for="color3"><span class="color3"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color4" value="./img/bg-1-4.png" />
-                                                        <label for="color4"><span class="color4"></span></label>
-                                                    </form>
+
+                                        <div class="swiper-slide">
+                                            <div class="img-wrapper">
+                                                <img class="product-image" src="./img/bg-3.png" alt="ürün">
+                                            </div>
+                                            <div class="content">
+                                                <h6>365 Signature Hoodie</h6>
+                                                <div class="bottom">
+                                                    <span class="price">€33.95</span>
+                                                    <div class="change">
+                                                        <form>
+                                                            <div class="form-row d-flex">
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color5"
+                                                                        value="./img/bg-3-2.png" />
+                                                                    <label for="color5"><span
+                                                                            class="color1"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color6"
+                                                                        value="./img/bg-3-4.png" />
+                                                                    <label for="color6"><span
+                                                                            class="color2"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color7"
+                                                                        value="./img/bg-3-1.png" checked />
+                                                                    <label for="color7"><span
+                                                                            class="color3"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color8"
+                                                                        value="./img/bg-3-3.png" />
+                                                                    <label for="color8"><span
+                                                                            class="color4"></span></label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img-wrapper">
+                                                <img class="product-image" src="./img/bg-1.png" alt="ürün">
+                                            </div>
+                                            <div class="content">
+                                                <h6>365 Signature Hoodie</h6>
+                                                <div class="bottom">
+                                                    <span class="price">€33.95</span>
+                                                    <div class="change">
+                                                        <form>
+                                                            <div class="form-row d-flex">
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color9"
+                                                                        value="./img/bg-2.png" checked />
+                                                                    <label for="color9"><span
+                                                                            class="color1"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color10"
+                                                                        value="./img/bg-2-1.png" />
+                                                                    <label for="color10"><span
+                                                                            class="color2"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color11"
+                                                                        value="./img/bg-2-2.png" />
+                                                                    <label for="color11"><span
+                                                                            class="color3"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color12"
+                                                                        value="./img/bg-2-3.png" />
+                                                                    <label for="color12"><span
+                                                                            class="color4"></span></label>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img-wrapper">
+                                                <img class="product-image" src="./img/bg-3.png" alt="ürün">
+                                            </div>
+                                            <div class="content">
+                                                <h6>365 Signature Hoodie</h6>
+                                                <div class="bottom">
+                                                    <span class="price">€33.95</span>
+                                                    <div class="change">
+                                                        <form>
+                                                            <div class="form-row d-flex">
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color13"
+                                                                        value="./img/bg-3-2.png" />
+                                                                    <label for="color13"><span
+                                                                            class="color1"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color14"
+                                                                        value="./img/bg-3-4.png" />
+                                                                    <label for="color14"><span
+                                                                            class="color2"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color15"
+                                                                        value="./img/bg-3-1.png" />
+                                                                    <label for="color15"><span
+                                                                            class="color3"></span></label>
+                                                                </div>
+                                                                <div class="form-group position-relative">
+                                                                    <input type="radio" name="color" id="color16"
+                                                                        value="./img/bg-3-3.png" checked />
+                                                                    <label for="color16"><span
+                                                                            class="color4"></span></label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="swiper-slide">
-                                        <div class="img-wrapper">
-                                            <img class="product-image" src="./img/bg-3.png" alt="ürün">
-                                        </div>
-                                        <div class="content">
-                                            <h6>365 Signature Hoodie</h6>
-                                            <div class="bottom">
-                                                <span class="price">€33.95</span>
-                                                <div class="change">
-                                                    <form>
-                                                        <input type="radio" name="color" id="color5" value="./img/bg-3-2.png" />
-                                                        <label for="color5"><span class="color1"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color6" value="./img/bg-3-4.png"  />
-                                                        <label for="color6"><span class="color2"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color7" value="./img/bg-3-1.png" checked />
-                                                        <label for="color7"><span class="color3"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color8" value="./img/bg-3-3.png" />
-                                                        <label for="color8"><span class="color4"></span></label>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-wrapper">
-                                            <img class="product-image" src="./img/bg-1.png" alt="ürün">
-                                        </div>
-                                        <div class="content">
-                                            <h6>365 Signature Hoodie</h6>
-                                            <div class="bottom">
-                                                <span class="price">€33.95</span>
-                                                <div class="change">
-                                                    <form>
-                                                        <input type="radio" name="color" id="color9" value="./img/bg-2.png"checked/>
-                                                        <label for="color9"><span class="color1"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color10" value="./img/bg-2-1.png" />
-                                                        <label for="color10"><span class="color2"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color11" value="./img/bg-2-2.png"  />
-                                                        <label for="color11"><span class="color3"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color12" value="./img/bg-2-3.png" />
-                                                        <label for="color12"><span class="color4"></span></label>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-wrapper">
-                                            <img class="product-image" src="./img/bg-3.png" alt="ürün">
-                                        </div>
-                                        <div class="content">
-                                            <h6>365 Signature Hoodie</h6>
-                                            <div class="bottom">
-                                                <span class="price">€33.95</span>
-                                                <div class="change">
-                                                    <form>
-                                                        <input type="radio" name="color" id="color13" value="./img/bg-3-2.png" />
-                                                        <label for="color13"><span class="color1"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color14" value="./img/bg-3-4.png"  />
-                                                        <label for="color14"><span class="color2"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color15" value="./img/bg-3-1.png"  />
-                                                        <label for="color15"><span class="color3"></span></label>
-                                    
-                                                        <input type="radio" name="color" id="color16" value="./img/bg-3-3.png" checked />
-                                                        <label for="color16"><span class="color4"></span></label>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
                                 </div>
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="accordion">
+                        <div class="content">
+                            <h2 class="accordion-title">Lorem Ipsum <i class="fas fa-caret-down"></i></h2>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, laudantium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="accordion">
+                        <div class="content">
+                            <h2 class="accordion-title">Lorem Ipsum <i class="fas fa-caret-down"></i></h2>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="accordion">
+                        <div class="content">
+                            <h2 class="accordion-title">Lorem Ipsum <i class="fas fa-caret-down"></i></h2>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, inventore!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="accordion">
+                        <div class="content">
+                            <h2 class="accordion-title">Lorem Ipsum<i class="fas fa-caret-down"></i></h2>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, rem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"
+        integrity="sha512-9UsrKTYzS9smDm2E58MLs0ACtOki+UC4bBq4iK5wi7lJycwqcaiHxr1bdEsIVoK0l5STEzLUdYyDdFQ5OEjczw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mmenu-js/8.5.24/mmenu.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
 
 </body>
 
