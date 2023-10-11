@@ -454,11 +454,13 @@ button {
 }
 
 footer {
+  display: none;
   padding: 6rem 3rem 5rem 3rem;
   background-color: var(--bg-color);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
   footer {
+    display: block;
     padding: 3rem 2rem 2rem 2rem;
   }
 }
@@ -478,6 +480,11 @@ footer .accordion .accordion-title {
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  footer .accordion .accordion-title {
+    font-size: 1.1rem;
+  }
 }
 @media screen and (max-width: 600px) {
   footer .accordion .accordion-title {

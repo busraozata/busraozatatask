@@ -434,11 +434,14 @@ $colors: (
     }
 }
 footer {
+    display: none;
     padding: 6rem 3rem 5rem 3rem;
     background-color: var(--bg-color);
-    @media screen and (max-width: $sm-breakpoint) {
+    @media screen and (max-width:$lg-breakpoint) {
+        display: block;
         padding: 3rem 2rem 2rem 2rem;
     }
+   
     .accordion {
         padding: 0rem 1rem;
         @media screen and (max-width: $sm-breakpoint) {
@@ -452,6 +455,9 @@ footer {
             font-weight: 600;
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width:$lg-breakpoint) {
+                font-size: 1.1rem;
+            }
             @media screen and (max-width: $sm-breakpoint) {
                 font-size: 1rem;
             }
